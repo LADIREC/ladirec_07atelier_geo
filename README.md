@@ -3,4 +3,5 @@ Cet atelier partira d’un cas particulier, la représentation spatiale de crime
 
 ## Source de donnees:
 https://www.donneesquebec.ca/recherche/dataset/vmtl-actes-criminels#
+
 Service de police de la Ville de Montréal - Division des ressources informationnelles, Attribution (CC-BY 4.0)
