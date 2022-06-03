@@ -28,8 +28,8 @@ actes_criminel <- fread("donnees/actes-criminels.tsv")
 ## Défi 1: Regarder les données avec View()
 View()
 
-## Défi 2: Explorer les données avec summary() et faire une recherche sur les données omises dans les colonnes LONGITUDE et LATITUDE
-
+## Défi 2: Explorer les données avec la function summary() et faire une recherche sur les données dans les colonnes
+summary()
 
 ## Regarder les variables spécifiques avec table() et $ pour la colonne
 table(actes_criminel$CATEGORIE)
@@ -38,12 +38,11 @@ table(actes_criminel$CATEGORIE)
 
 
 ### Géocodage inversé = attribuer une adresse à des coordonnées géographiques
-## Les adresses sont dans les colonnes LONGITUDE et LATITUDE
+## Les coordonnées sont dans les colonnes LONGITUDE et LATITUDE
 
 ## Défi 4: Copier et coller les premières coordonnées des tables et trouver l'adresse
 ## dans https://www.gps-coordinates.net
 actes_criminel[1,"LONGITUDE"]
-actes_criminel[]
 
 ##Défi 5: Trouver la première valeur de la colonne LATITUDE avec l'index
 actes_criminel[]
@@ -55,7 +54,7 @@ actes_criminel[]
 actes_100 <- sample_n(actes_criminel, 100)
 
 ## Géocodage inversé
-## Pour l'information: https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html
+## Pour l'informatin: https://cran.r-project.org/web/packages/tidygeocoder/vignettes/tidygeocoder.html
 
 actes_100_geo <- actes_100 %>%
   reverse_geocode(lat = LATITUDE, long = LONGITUDE, 
